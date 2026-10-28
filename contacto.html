@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" type="image" href="./images/Tech Samurai Icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2>Entre em Contacto por E-mail</h2>
+            <div class="contact-form">
+                
+<form id="contact_form">
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+    </div>
+    
+    <button type="submit" class="button primary">Enviar Mensagem</button>
+    <a href="./index.html" class="button primary">Voltar</a>
+    
+</form>
+            </div>
+            <div class="contact-info">
+                <h3>Informações de Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i><img src="./images/Location.png" alt="Localização" class="marcador">Palmela</p>
+                <p><i class="fas fa-phone"></i><img src="./images/whatsapp.png" alt="Bandeira de Portugal" class="bandeira"> +351 932 926 294</p>
+                <p><i class="fas fa-envelope"></i><img src="./images/Gmail.png" alt="Correio Eletrónico" class="gmail">techsamurai20@gmail.com</p>
+            </div>
+        </div>
+    </section>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript" src="./script.js"></script> 
+    </body>
+</html>

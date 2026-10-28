@@ -1,0 +1,476 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.container {
+    font-size: 22px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+header {
+    background-color: #222;
+    padding: 10px 0;
+    border-bottom: 2px solid #a58044;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo a {
+    font-size: 45px;
+    font-weight: bold;
+    color: #a58044;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logo a img {
+    vertical-align: middle;
+    max-height: 100px;
+}
+
+header .logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+/* Logótipo principal no Header */
+.logo-img {
+    max-height: 70px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Imagem da secção Hero (página principal) */
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagem da secção Sobre Mim */
+.about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagem de ícone/destaque (como o Windows Defender) */
+.feature-img {
+    max-width: 160px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+}
+
+/* Navegação*/
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a58044;
+}
+
+/*Hero*/
+#hero {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    min-height: 70vh;
+    position: relative;
+    overflow: hidden;
+
+    background-image: url('./images/Windows\ Defender\ BG.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    color: #a58044;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    color: #eee;
+    margin-bottom: 40px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button.primary {
+    background-color: #a58044;
+    color: #222;
+}
+
+.button.primary:hover {
+    background-color: #8c6b39;
+}
+
+.button.secondary {
+    background-color: #333;
+    color: #a58044;
+    border: 1px solid #a58044;
+}
+
+.button.secondary:hover {
+    background-color: #444;
+}
+
+/* Serviços */
+#servicos {
+    padding: 75px 20px;
+    background-color: #222;
+}
+
+#servicos h2 {
+    font-size: 32px;
+    color: #a58044;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    border-color: #a58044;
+}
+
+.service-item i {
+    font-size: 40px;
+    color: #a58044;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 20px;
+    color: #eee;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.service-item a.button {
+    margin-top: 15px;
+}
+
+/* Sobre Mim */
+#sobre {
+    padding: 60px 20px;
+    background-color: #181818;
+}
+
+#sobre h2 {
+    font-size: 32px;
+    color: #a58044;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+/* Contacto */
+#contacto {
+    padding: 60px 20px;
+    background-color: #222;
+}
+
+#contacto h2 {
+    font-size: 32px;
+    color: #a58044;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #eee;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #444;
+    color: #eee;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-info {
+    text-align: center;
+    color: #eee;
+    margin-top: 30px;
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    color: #a58044;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    max-width: 350px;
+    margin: 0 auto 10px auto;
+    text-align: left;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p .marcador,
+.contact-info p .bandeira,
+.contact-info p .gmail {
+    width: auto;
+    height: 0rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #a58044;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-light {
+    background-color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero {
+        min-height: 50vh;
+        padding: 60px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    form .button {
+        width: 100%;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .contact-info p {
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+}
